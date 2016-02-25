@@ -1,14 +1,22 @@
 package test;
 
+import java.io.IOException;
+
 import com.dbyl.libarary.pageAction.act;
+import com.dbyl.libarary.pageAction.makeFiles;
 
 public class testBasePage {
 	
-
-	public static void main(String[] args) {
+    static String path;
+    
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		act ACT = new act();
-		ACT.testPg();
+		path = ACT.testPg();
+		
+		makeFiles mKF = new makeFiles();
+		mKF.makefiles(path);
+		
 	}
 	
 
